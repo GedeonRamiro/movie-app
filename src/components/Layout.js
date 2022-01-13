@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 const Layout = ( {children} ) => {
     return (
         <>
-        <div className="mb-2 shadow-lg navbar bg-neutral text-neutral-content">
+        <nav className="items-center mb-2 shadow-lg navbar bg-neutral text-neutral-content">
             <div className="flex-none px-2 mx-2">
                 <span className="text-lg font-bold">
                     Movie-App
@@ -11,8 +11,8 @@ const Layout = ( {children} ) => {
             </div> 
             <div className="flex-1 px-2 mx-2">
                 <div className="items-stretch hidden lg:flex">
-                    <Link className="btn btn-ghost btn-sm rounded-btn"  to={'/'}> Home </Link>
-                    <Link className="btn btn-ghost btn-sm rounded-btn" to={'/sign-in'}> SignIn </Link>
+                    <Link className="btn btn-ghost btn-sm rounded-btn no-animation"  to={'/'}> Home </Link>
+                    <Link className="btn btn-ghost btn-sm rounded-btn no-animation" to={'/sign-in'}> SignIn </Link>
                 </div>
             </div> 
             <div className="flex-none">
@@ -22,7 +22,7 @@ const Layout = ( {children} ) => {
                 </svg>
                 </button>
             </div>
-        </div>
+        </nav>
         {children}
         </>
 
