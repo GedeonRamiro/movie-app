@@ -67,7 +67,7 @@ const Home = () => {
                         {movies.map(movie => (
                             <div key={movie.id} className="my-10 shadow-md card md:card-side card-bordered">
                                 <figure  className="px-6">
-                                    <img className='rounded-lg' src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt={movie.title} alt={movie.title} />
+                                    <img className='rounded-lg' src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt={movie.title} />
                                 </figure> 
                                 <div className="card-body">
                                     <h2 className="card-title">{movie.title}</h2> 
