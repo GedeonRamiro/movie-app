@@ -50,7 +50,7 @@ const Profile = () => {
 
     const removeFromWatchList = async (id) => {
 
-        const { data, error } = await supabase.from('watchlists')
+        const { error } = await supabase.from('watchlists')
             .delete()
             .match({movie_id: id, user_id: auth.user.id})
 
