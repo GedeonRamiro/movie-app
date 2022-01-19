@@ -67,6 +67,7 @@ const Profile = () => {
 
     useEffect(() => {
         getWatchList()
+         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (
