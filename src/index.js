@@ -7,10 +7,13 @@ import SignIn from './pages/SignIn'
 import { AuthProvider } from './context/auth'
 import ProtectedRoute from './components/ProtectedRoute'
 import Profile from './pages/Profile';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 ReactDOM.render(
   <AuthProvider>
+    <ToastContainer />
     <BrowserRouter>
       <Routes>
          <Route index element={<Home />} /> 

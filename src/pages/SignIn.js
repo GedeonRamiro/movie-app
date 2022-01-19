@@ -8,15 +8,15 @@ const SignIn = () => {
 
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
-    console.log(email)
+    console.log(message)
 
     const handleSignIn = async (e) => {
         e.preventDefault()
 
        const signIn = await auth.login(email)
+      
 
        if(signIn.error) {
-           console.log(signIn)
            setMessage(signIn.error.message)
        } else {
            setMessage('Link enviado para o E-mail')
@@ -29,10 +29,21 @@ const SignIn = () => {
 
     return (
         <Layout>
-            {message && message}
-            <form onSubmit={handleSignIn} className="form-control">
+
+            {message && (
+                <div className="mt-10 alert alert-info">
+                    <div className="flex-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="w-6 h-6 mx-2 stroke-current">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>                          
+                    </svg> 
+                    <label>{message}</label>
+                    </div>
+               </div>
+              
+            )}
+            <form onSubmit={handleSignIn} className="mt-10 form-control">
                 <label className="label">
-                    <span className="label-text">Connected com E-mail</span>
+                    <span className="label-text">Conectar com E-mail</span>
                 </label> 
                 <div className="relative">
                     <input 
