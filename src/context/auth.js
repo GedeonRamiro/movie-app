@@ -46,11 +46,11 @@ function useProviderAuth () {
         setUser(user)
 
         const auth = supabase.auth.onAuthStateChange((event, session) => {
-            if (event == 'SIGNED_IN') {
+            if (event === 'SIGNED_IN') {
                 setUser(session.user)
             } 
 
-            if (event == 'SIGNED_OUT') {
+            if (event === 'SIGNED_OUT') {
                 setUser(null)
             } 
 
